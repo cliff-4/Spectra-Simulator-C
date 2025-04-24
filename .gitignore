@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+# Config files
+.venv
+cmake*
+CMake*
+Makefile
+Data/*
+specsim

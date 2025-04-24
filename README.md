@@ -488,3 +488,25 @@ No external contribution is expected. This project is constantly improved, so pl
 * Owner: Othman Benomar (NAOJ Research Fellow, Visiting Scientist at NYU Abu Dhabi)
 
 * Contact: othman.benomar@nao.ac.jp ob19@nyu.edu
+
+
+### Quick and dirty setup
+In the workplace folder:
+```
+export CXX=g++
+export EIGEN3_INCLUDE_DIR=/usr/local/include/eigen3/
+
+# Python env with numpy
+python3 -m venv .venv
+source .venv/bin/activate
+pip install numpy
+
+# Compiling specsim
+mkdir build && cd build
+cmake ..
+make
+
+# Setting config and taking data
+cd ..
+python run_code.py
+```
