@@ -1,0 +1,58 @@
+path:  training_code/.checkpoints/
+restore:  None
+path training_code/.checkpoints/ created
+Using cpu device
+180 94 37 28 11 4 18 20 10 99 16 13 11 10 10
+Model(
+  (conv1): Conv1d(1, 16, kernel_size=(51,), stride=(1,), padding=(25,))
+  (gn1): GroupNorm(16, 16, eps=1e-05, affine=True)
+  (conv2): Conv1d(16, 32, kernel_size=(51,), stride=(1,), padding=(25,))
+  (gn2): GroupNorm(32, 32, eps=1e-05, affine=True)
+  (conv3): Conv1d(32, 64, kernel_size=(51,), stride=(1,), padding=(25,))
+  (gn3): GroupNorm(64, 64, eps=1e-05, affine=True)
+  (conv4): Conv1d(64, 128, kernel_size=(51,), stride=(1,), padding=(25,))
+  (gn4): GroupNorm(128, 128, eps=1e-05, affine=True)
+  (conv5): Conv1d(128, 256, kernel_size=(51,), stride=(1,), padding=(25,))
+  (gn5): GroupNorm(256, 256, eps=1e-05, affine=True)
+  (conv6): Conv1d(256, 512, kernel_size=(51,), stride=(1,), padding=(25,))
+  (gn6): GroupNorm(512, 512, eps=1e-05, affine=True)
+  (maxpool): MaxPool1d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=False)
+  (avgpool): AvgPool1d(kernel_size=(3,), stride=(3,), padding=(1,))
+  (drop): Dropout(p=0.25, inplace=True)
+  (lstm1): LSTM(512, 256, batch_first=True)
+  (lstm2): LSTM(256, 512, batch_first=True)
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (linear): Linear(in_features=25088, out_features=200, bias=True)
+  (linear_dnu): Linear(in_features=200, out_features=180, bias=True)
+  (linear_dp): Linear(in_features=200, out_features=94, bias=True)
+  (linear_q): Linear(in_features=200, out_features=37, bias=True)
+  (linear_acr): Linear(in_features=200, out_features=28, bias=True)
+  (linear_aer): Linear(in_features=200, out_features=11, bias=True)
+  (linear_a3): Linear(in_features=200, out_features=4, bias=True)
+  (linear_inc): Linear(in_features=200, out_features=18, bias=True)
+)
+loading data: training_code/data/data_000.npy
+Data shape after memmap: (5120, 35707)
+Time taken for loading data= 31.47 s
+Data shape: (5120, 35707)
+Min value in last column: 0.10007733106613159, Max value: 0.9998558759689331
+Shape of X before reshape: (3102, 35692)
+(3102, 35692, 1) (3102, 36)
+dataset preparation completed
+Dnu before: [-1 -1 -1 -1 -1 -1 -1 -1 -1 -1]
+Dnu after: [0 0 0 0 0 0 0 0 0 0]
+Dp before: [-1 -1 -1 -1 -1 -1 -1 -1 -1 -1]
+Dp after: [0 0 0 0 0 0 0 0 0 0]
+q before: [ 9 37 21 24 36 37 37  9  8 37]
+q after: [ 9 36 21 24 36 36 36  9  8 36]
+acr before: [3 4 4 6 5 6 7 6 6 6]
+acr after: [3 4 4 6 5 6 7 6 6 6]
+aer before: [11 11 11 11 11  2  8  5 11  0]
+aer after: [10 10 10 10 10  2  8  5 10  0]
+a3 before: [4 4 3 3 3 4 4 4 4 4]
+a3 after: [3 3 3 3 3 3 3 3 3 3]
+inc before: [0 0 0 0 0 0 0 0 0 0]
+inc after: [0 0 0 0 0 0 0 0 0 0]
+(3102, 7)
+(3102, 1, 35699)
+tensor([[[ 0.3074, -0.7648, -1.1353,  ...,  0.6919,  0.1841,  0.1318]]]) tensor([[[ 0.,  0.,  9.,  3., 10.,  3.,  0.]]])

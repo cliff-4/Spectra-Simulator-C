@@ -1,0 +1,37 @@
+nurot_env           aer
+nurot_core          acr
+a2_l1_core
+a2_l1_env
+a2_l2_env
+a2_l3_env
+a3_l2_env           a3
+a3_l3_env
+a4_l2_env
+a4_l3_env
+a5_l3_env
+a6_l3_env
+Dnu                 dnu
+epsilon
+delta0l_percent
+beta_p_star
+nmax_spread
+DP1                 dp
+alpha
+q                   q
+SNR                 snr
+maxGamma            gamma
+numax_spread
+Vl1                 vl1
+Vl2                 vl2
+Vl3                 vl3
+H0_spread
+A_Pgran
+B_Pgran
+C_Pgran
+A_taugran
+B_taugran
+C_taugran
+P
+N0
+Hfactor             numax?
+Wfactor             inc

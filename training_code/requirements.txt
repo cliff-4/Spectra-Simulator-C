@@ -1,0 +1,8 @@
+torch # mind your cuda compatibility
+torchvision
+torchaudio
+
+numpy
+matplotlib
+# scikit-image
+ipykernel

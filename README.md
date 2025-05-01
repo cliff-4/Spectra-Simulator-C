@@ -491,6 +491,7 @@ No external contribution is expected. This project is constantly improved, so pl
 
 
 ### Quick and dirty setup
+#### Compile and run Spectra Sim
 In the workplace folder:
 ```
 export CXX=g++
@@ -509,4 +510,9 @@ make
 # Setting config and taking data
 cd ..
 python run_code.py
+```
+
+#### Training on said data
+```
+python /home/cliff/SS/training_code/main.py --path ./training_code/.checkpoints/
 ```
